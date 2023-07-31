@@ -1,4 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+//import React from "react";
+//import { VatomIdentitySDK } from "@vatom/identity-sdk"
 //import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import HomePage from './pages/Home';
@@ -8,6 +10,25 @@ import './Common.css';
 
 
 function App() {
+
+/***
+  const clientId = "dce3993b6a24c278"
+  const sdkConfig = {}
+  const identitySdk = new VatomIdentitySDK(clientId, sdkConfig)
+  const [accessToken, setAccessToken] = React.useState(identitySdk.getAccessToken())
+
+  useEffect(() => {
+    const triggerCallback = async () => {
+      // Put this inside your callback components
+      const res = await identitySdk.onCallbacks()
+      if (res) {
+        setAccessToken(identitySdk.getAccessToken())
+      }
+    }
+    triggerCallback()
+  }, [])
+***/
+
   return (
     <BrowserRouter basename={"/" }>
     	<div className="page_frame">
