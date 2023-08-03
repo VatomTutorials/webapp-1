@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App2 from './App2.tsx'
+import { RouterProvider } from 'react-router-dom';
+import { appRouter } from './routes/appRouter';
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App2 />
+		<RouterProvider router={appRouter} />
   </React.StrictMode>,
 )
