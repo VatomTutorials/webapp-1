@@ -1,16 +1,23 @@
-// import { useNavigate } from "react-router-dom";
-// import Button from 'react-bootstrap/Button';
-// import appLogo from '../assets/app-logo.png';
-// import '../Common.css';
+import { Outlet, useOutletContext } from 'react-router-dom';
+import { DiagConfig } from '../components/diagTypes';
+import { DiagStamp } from '../components/DiagStamp';
+import '../Common.css';
 
 
 const PrivHome = () => {
+	const { diagConfig } = useOutletContext();
+
+  console.log('In PrivHome', diagConfig);
+
   return (
 		<div>
-			{ console.log('Render PrivHome') }
+			<DiagStamp stampText='PrivHome' diagConfig={diagConfig} />
 			<h1>Home page</h1>
 		</div>
   );
 }
 //
 export default PrivHome;
+
+
+// 			{ showLayoutNames ? <div className='diagnostic_text' >PrivHome</div>:<div/>}

@@ -1,11 +1,15 @@
 import { Outlet, useOutletContext } from 'react-router-dom';
 import React from "react";
 import { VatomIdentitySDK } from "@vatom/identity-sdk"
+import { DiagConfig } from '../components/diagTypes';
+// import { DiagStamp } from '../components/DiagStamp';
 
 
 function AppAccessLayout() {
 	const { identitySdk } = useOutletContext();
   const [accessToken, setAccessToken] = React.useState(identitySdk.getAccessToken())
+  //const showLayoutNames = true;
+  const diagConfig:DiagConfig = {showLayoutNames: true, logOnRender: true}
   
   console.log('In AppAccessLayout');
 
@@ -22,7 +26,7 @@ function AppAccessLayout() {
   
 	return (
 		<>
-			<Outlet context={{identitySdk, accessToken}} />
+			<Outlet context={{diagConfig, accessToken}} />
 		</>
 	);
 }

@@ -1,10 +1,12 @@
 import { Outlet, useOutletContext, useNavigate } from 'react-router-dom';
 import React from "react";
+import { DiagConfig } from '../components/diagTypes';
+import { DiagStamp } from '../components/DiagStamp';
 import '../Common.css';
 
 
 const PrivLayout = () => {
-	const { accessToken } = useOutletContext();
+	const { diagConfig, accessToken } = useOutletContext();
 	const navigate = useNavigate();
 
 	React.useEffect(() => {
@@ -12,15 +14,23 @@ const PrivLayout = () => {
 		if (!accessToken) navigate('/default');
 	}, [])
 
-  // console.log('In PrivLayout');
+  console.log('In PrivLayout', diagConfig);
 
   return (
 		<div>
-			{ console.log('Render PrivLayout') }
-			<div className='diagnostic_text' >PrivLayout</div>
-			<Outlet />			
+			<DiagStamp stampText='PrivLayout' diagConfig={diagConfig} />
+			<Outlet context={{diagConfig}}/>			
 		</div>
   );
 }
 //
 export default PrivLayout;
+
+
+/***
+		<div>
+			{ console.log('Render PrivLayout') }
+			{ showLayoutNames ? <div className='diagnostic_text' >PrivLayout</div>:<div/>}
+			<Outlet />			
+		</div>
+ ***/
