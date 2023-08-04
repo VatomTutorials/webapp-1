@@ -1,4 +1,4 @@
-import { RouterProvider } from 'react-router-dom';
+import { Outlet, useOutletContext } from 'react-router-dom';
 import React from "react";
 import { VatomIdentitySDK } from "@vatom/identity-sdk"
 
