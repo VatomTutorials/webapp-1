@@ -11,7 +11,7 @@ const GuestLayout = () => {
 		if (!! accessToken) navigate('/default');
 	}, [])
 
-  console.log('In GuestLayout');
+  // console.log('In GuestLayout');
 
   return (
 		<div>
