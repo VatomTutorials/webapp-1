@@ -1,5 +1,6 @@
 import { Outlet, useOutletContext, useNavigate } from 'react-router-dom';
 import React from "react";
+import '../Common.css';
 
 
 const PrivLayout = () => {
@@ -16,7 +17,7 @@ const PrivLayout = () => {
   return (
 		<div>
 			{ console.log('Render PrivLayout') }
-			<h1>PrivLayout</h1>
+			<div className='diagnostic_text' >PrivLayout</div>
 			<Outlet />			
 		</div>
   );

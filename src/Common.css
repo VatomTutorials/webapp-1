@@ -71,3 +71,9 @@
 	margin: 4px;
 	font-size: 18px;
 }
+
+.diagnostic_text{
+	background-color: pink;
+	color: black;
+	font-size: 10px;
+}

@@ -3,16 +3,16 @@ import AppIdSdkLayout				from './AppIdSdkLayout';
 import AppAccessLayout			from './AppAccessLayout';
 import SplashScreenLayout		from './SplashScreenLayout';
 import DefaultRedirect			from './DefaultRedirect';
-import GuestLayout					from './guest/GuestLayout';
-import GuestDefault					from './guest/GuestDefault';
-import GuestAbout						from './guest/GuestAbout';
-import GuestError404				from './guest/GuestError404';
-import GuestHome						from './guest/GuestHome';
-import PrivLayout						from './priv/PrivLayout';
-import PrivDefault					from './priv/PrivDefault';
-import PrivAbout						from './priv/PrivAbout';
-import PrivError404					from './priv/PrivError404';
-import PrivHome							from './priv/PrivHome';
+import GuestLayout					from '../route-guest/GuestLayout';
+import GuestDefault					from '../route-guest/GuestDefault';
+import GuestAbout						from '../route-guest/GuestAbout';
+import GuestError404				from '../route-guest/GuestError404';
+import GuestHome						from '../route-guest/GuestHome';
+import PrivLayout						from '../route-priv/PrivLayout';
+import PrivDefault					from '../route-priv/PrivDefault';
+import PrivAbout						from '../route-priv/PrivAbout';
+import PrivError404					from '../route-priv/PrivError404';
+import PrivHome							from '../route-priv/PrivHome';
 
 
 export const appRouter = createBrowserRouter([{
