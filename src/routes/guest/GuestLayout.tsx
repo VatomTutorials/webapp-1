@@ -1,7 +1,5 @@
-import { Outlet } from 'react-router-dom';
-// import { useNavigate } from "react-router-dom";
-// import appLogo from '../assets/app-logo.png';
-// import '../Common.css';
+import { Outlet, useOutletContext, useNavigate } from 'react-router-dom';
+import React from "react";
 
 
 const GuestLayout = () => {

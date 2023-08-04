@@ -2,6 +2,7 @@ import { createBrowserRouter	} from 'react-router-dom';
 import AppIdSdkLayout				from './AppIdSdkLayout';
 import AppAccessLayout			from './AppAccessLayout';
 import SplashScreenLayout		from './SplashScreenLayout';
+import DefaultRedirect			from './DefaultRedirect';
 import GuestLayout					from './guest/GuestLayout';
 import GuestDefault					from './guest/GuestDefault';
 import GuestAbout						from './guest/GuestAbout';
@@ -19,7 +20,8 @@ export const appRouter = createBrowserRouter([{
 	children: [{
 		element: <AppAccessLayout />,
 		children: [
-			{ path: "/",			element: <SplashScreenLayout /> },
+			{ path: "/",					element: <SplashScreenLayout /> },
+			{ path: "/default",		element: <DefaultRedirect /> },
 			{ 
 				path: "/guest",
 				element: <GuestLayout />,

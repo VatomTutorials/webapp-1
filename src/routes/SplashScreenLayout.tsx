@@ -1,9 +1,5 @@
 import { useOutletContext, useNavigate } from 'react-router-dom';
 import React from "react";
-// import { Outlet, useOutletContext } from 'react-router-dom';
-// import { useNavigate } from "react-router-dom";
-// import appLogo from '../assets/app-logo.png';
-// import '../Common.css';
 
 
 const SplashScreenLayout = () => {
