@@ -14,7 +14,7 @@ const PrivLayout = () => {
 		if (!accessToken) navigate('/default');
 	}, [])
 
-  console.log('In PrivLayout', diagConfig);
+  // console.log('In PrivLayout', diagConfig);
 
   return (
 		<div>

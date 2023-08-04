@@ -7,7 +7,7 @@ import '../Common.css';
 const PrivHome = () => {
 	const { diagConfig } = useOutletContext();
 
-  console.log('In PrivHome', diagConfig);
+  // console.log('In PrivHome', diagConfig);
 
   return (
 		<div>

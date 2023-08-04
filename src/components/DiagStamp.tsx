@@ -8,7 +8,7 @@ export function DiagStamp(props) {
 	let stampElement: JSX.Element = (!! props.diagConfig.showLayoutNames)
 		? <div className='diagnostic_text' >{props.stampText}</div> : <div/>;
 
-  console.log('In DiagStamp', props);
+  // console.log('In DiagStamp', props);
 
   return (
 		<div>
@@ -17,8 +17,3 @@ export function DiagStamp(props) {
 		</div>
   );
 }
-
-
-// 			{ if (diagConfig.logOnRender) console.log('Render PrivLayout') }
-
-// 			{ diagConfig.showLayoutNames ? <div className='diagnostic_text' >{label}</div>:<div/>}
