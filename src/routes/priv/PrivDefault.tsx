@@ -11,7 +11,10 @@ const PrivDefault = () => {
   }, [])
 
   return (
-		<div />
+		<div>
+			{ console.log('Render PrivDefault') }
+			<h1>PrivDefault</h1>
+		</div>
   );
 }
 //

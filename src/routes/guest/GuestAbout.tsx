@@ -7,6 +7,7 @@
 const GuestAbout = () => {
   return (
 		<div>
+			{ console.log('Render GuestAbout') }
 			<h1>About page</h1>
 			<h3>v 0.0.003</h3>
 		</div>

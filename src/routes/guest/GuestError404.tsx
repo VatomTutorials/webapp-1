@@ -7,6 +7,7 @@
 const GuestError404 = () => {
   return (
 		<div>
+			{ console.log('Render GuestError404') }
 			<h1>Page not found</h1>
 			<h3>Please try again</h3>
 			<h3>Error 404</h3>

@@ -7,6 +7,7 @@
 const PrivHome = () => {
   return (
 		<div>
+			{ console.log('Render PrivHome') }
 			<h1>Home page</h1>
 		</div>
   );

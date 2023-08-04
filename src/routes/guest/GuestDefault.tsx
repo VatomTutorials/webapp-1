@@ -11,7 +11,10 @@ const GuestDefault = () => {
   }, [])
 
   return (
-		<div />
+		<div>
+			{ console.log('Render GuestDefault') }
+			<h1>GuestDefault</h1>
+		</div>
   );
 }
 //

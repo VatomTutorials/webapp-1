@@ -7,6 +7,7 @@
 const PrivError404 = () => {
   return (
 		<div>
+			{ console.log('Render PrivError404') }
 			<h1>Page not found</h1>
 			<h3>Please try again</h3>
 			<h3>Error 404</h3>

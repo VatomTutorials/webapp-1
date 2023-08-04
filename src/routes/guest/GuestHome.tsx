@@ -7,6 +7,7 @@
 const GuestHome = () => {
   return (
 		<div>
+			{ console.log('Render GuestHome') }
 			<h1>Home page</h1>
 		</div>
   );
