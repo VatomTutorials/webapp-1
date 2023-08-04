@@ -1,20 +1,17 @@
-import { useOutletContext, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import React from "react";
 
 
 const SplashScreenLayout = () => {
-	const { accessToken } = useOutletContext();
   const navigate = useNavigate();
 
   React.useEffect(() => {
-  	console.log('SplashScreenLayout mounted');
-		const nextRoute = (!accessToken) ? '/guest' : '/priv';
-  	setTimeout(() => navigate(nextRoute), 4000);
+  	setTimeout(() => navigate('/default'), 4000);
   }, [])
   
   return (
 		<div>
-	  	{ console.log('Render SplashScreenLayout') }
+			{ console.log('Render SplashScreenLayout') }
 			<h1>SplashScreenLayout</h1>
 		</div>
   );
