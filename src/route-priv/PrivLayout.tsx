@@ -1,7 +1,6 @@
 import { Outlet, useOutletContext, useNavigate } from 'react-router-dom';
 import React from "react";
-import { DiagConfig } from '../components/diagTypes';
-import { DiagStamp } from '../components/DiagStamp';
+import { DiagConfig, DiagStamp } from '../components/Diagnostics';
 import '../Common.css';
 
 

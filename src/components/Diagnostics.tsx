@@ -1,5 +1,3 @@
-//import { Outlet, useOutletContext } from 'react-router-dom';
-//import './diagTypes.tsx';
 import '../Common.css';
 
 
@@ -25,7 +23,7 @@ export function DiagStamp(props) {
 }
 
 
-/***
+/*** *** *** ***
 // Usage:
 
 import { DiagConfig, DiagStamp } from '../components/Diagnostics';
@@ -41,4 +39,4 @@ import { Outlet, useOutletContext } from 'react-router-dom';
 		</div>
 	);
 
- ***/
+ *** *** *** ***/

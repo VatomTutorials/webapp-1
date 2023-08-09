@@ -1,7 +1,7 @@
 import { RouterProvider } from 'react-router-dom';
 import React from "react";
 import { VatomIdentitySDK } from "@vatom/identity-sdk"
-import { appRouter } from './routes/appRouter';
+import { appRouter } from './route-core/appRouter';
 
 
 function App2() {
@@ -10,7 +10,7 @@ function App2() {
   const identitySdk = new VatomIdentitySDK(clientId, sdkConfig)
   const [accessToken, setAccessToken] = React.useState(identitySdk.getAccessToken())
   
-  console.log('In App2');
+  console.log('In App2 with accessToken', accessToken);
 
   React.useEffect(() => {
     const triggerCallback = async () => {

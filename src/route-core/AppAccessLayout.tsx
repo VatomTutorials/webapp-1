@@ -1,8 +1,7 @@
+import { DiagConfig, DiagStamp } from '../components/Diagnostics';
 import { Outlet, useOutletContext } from 'react-router-dom';
 import React from "react";
 import { VatomIdentitySDK } from "@vatom/identity-sdk"
-import { DiagConfig } from '../components/diagTypes';
-// import { DiagStamp } from '../components/DiagStamp';
 
 
 function AppAccessLayout() {
