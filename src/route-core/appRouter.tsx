@@ -1,6 +1,5 @@
 import { createBrowserRouter	} from 'react-router-dom';
-import AppIdSdkLayout				from './AppIdSdkLayout';
-import AppAccessLayout			from './AppAccessLayout';
+import { RootLayout	}				from './RootLayout';
 import SplashScreenLayout		from './SplashScreenLayout';
 import DefaultRedirect			from './DefaultRedirect';
 import GuestLayout					from '../route-guest/GuestLayout';
@@ -16,32 +15,29 @@ import PrivHome							from '../route-priv/PrivHome';
 
 
 export const appRouter = createBrowserRouter([{
-	element: <AppIdSdkLayout />,
-	children: [{
-		element: <AppAccessLayout />,
-		children: [
-			{ path: "/",					element: <SplashScreenLayout /> },
-			{ path: "/default",		element: <DefaultRedirect /> },
-			{ 
-				path: "/guest",
-				element: <GuestLayout />,
-				children: [
-					{ index: true,		element: <GuestDefault />} ,
-					{ path: "about",	element: <GuestAbout />} ,
-					{ path: "home",		element: <GuestHome />} ,
-					{ path: "*",			element: <GuestError404 />} 
-				]
-			},
-			{ 
-				path: "/priv",
-				element: <PrivLayout />,
-				children: [
-					{ index: true,		element: <PrivDefault />} ,
-					{ path: "about",	element: <PrivAbout />} ,
-					{ path: "home",		element: <PrivHome />} ,
-					{ path: "*",			element: <PrivError404 />} 
-				]
-			}
-		]
-	}]
+	element: <RootLayout />,
+	children: [
+		{ path: "/",					element: <SplashScreenLayout /> },
+		{ path: "/default",		element: <DefaultRedirect /> },
+		{ 
+			path: "/guest",
+			element: <GuestLayout />,
+			children: [
+				{ index: true,		element: <GuestDefault />} ,
+				{ path: "about",	element: <GuestAbout />} ,
+				{ path: "home",		element: <GuestHome />} ,
+				{ path: "*",			element: <GuestError404 />} 
+			]
+		},
+		{ 
+			path: "/priv",
+			element: <PrivLayout />,
+			children: [
+				{ index: true,		element: <PrivDefault />} ,
+				{ path: "about",	element: <PrivAbout />} ,
+				{ path: "home",		element: <PrivHome />} ,
+				{ path: "*",			element: <PrivError404 />} 
+			]
+		}
+	]
 }]);

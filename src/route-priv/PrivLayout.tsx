@@ -1,26 +1,25 @@
-//import { Outlet, useNavigate } from 'react-router-dom';
-import { Outlet, useOutletContext, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import React from "react";
-import { useDiagConfig, DiagStamp } from '../components/Diagnostics';
-import '../Common.css';
+import { useRootContext_FromOutletContext }	from '../route-core/RootLayout';
+import { DiagStamp } from '../components/Diagnostics';
+// import '../Common.css';
 
 
 const PrivLayout = () => {
 	const navigate = useNavigate();
-	const { accessToken } = useOutletContext();
-	const diagConfig = useDiagConfig();
+	const rootContext = useRootContext_FromOutletContext();
 
 	React.useEffect(() => {
 		console.log('PrivLayout mounted');
-		if (!accessToken) navigate('/default');
+		if (! rootContext.isUserLoggedIn) navigate('/default');
 	}, [])
 
   // console.log('In PrivLayout', diagConfig);
 
   return (
 		<div>
-			<DiagStamp stampText='PrivLayout' diagConfig={diagConfig} />
-			<Outlet context={{diagConfig}}/>			
+			<DiagStamp stampText='PrivLayout' diagConfig={rootContext.diagConfig} />
+			<Outlet context={{rootContext}}/>			
 		</div>
   );
 }

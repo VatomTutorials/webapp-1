@@ -1,4 +1,4 @@
-import { useOutletContext } from 'react-router-dom';
+//import { useOutletContext } from 'react-router-dom';
 import '../Common.css';
 
 
@@ -14,10 +14,12 @@ export interface DiagStampProps {
 }
 
 
+/*** *** *** ***
 export function useDiagConfig() {
   return useOutletContext<DiagConfig>();
 }
-
+ *** *** *** ***/
+ 
 
 export function DiagStamp(props: DiagStampProps) {
 	//const { diagConfig, stampText } = useOutletContext();

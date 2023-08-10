@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 import React from "react";
-import { useDiagConfig, DiagStamp } from '../components/Diagnostics';
+import { useRootContext_FromOutletContext }	from '../route-core/RootLayout';
+import { DiagStamp } from '../components/Diagnostics';
 
 
 const PrivDefault = () => {
   const navigate = useNavigate();
-	const diagConfig = useDiagConfig();
+	const rootContext = useRootContext_FromOutletContext();
 
   React.useEffect(() => {
   	console.log('PrivDefault mounted');
@@ -14,7 +15,7 @@ const PrivDefault = () => {
 
   return (
 		<div>
-			<DiagStamp stampText='PrivDefault' diagConfig={diagConfig} />
+			<DiagStamp stampText='PrivDefault' diagConfig={rootContext.diagConfig} />
 			{ /*console.log('Render PrivDefault')*/ }
 			<h1>PrivDefault</h1>
 		</div>

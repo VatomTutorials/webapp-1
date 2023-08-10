@@ -1,11 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import React from "react";
-import { useDiagConfig, DiagStamp } from '../components/Diagnostics';
+import { useRootContext_FromOutletContext }	from './RootLayout';
+import { DiagStamp } from '../components/Diagnostics';
 
 
 const SplashScreenLayout = () => {
   const navigate = useNavigate();
-	const diagConfig = useDiagConfig();
+	const rootContext = useRootContext_FromOutletContext();
+	//const diagConfig = useDiagConfig();
 	
   React.useEffect(() => {
   	setTimeout(() => navigate('/default'), 4000);
@@ -13,7 +15,7 @@ const SplashScreenLayout = () => {
   
   return (
 		<div>
-			<DiagStamp stampText='SplashScreenLayout' diagConfig={diagConfig} />
+			<DiagStamp stampText='SplashScreenLayout' diagConfig={rootContext.diagConfig} />
 			{ /* console.log('Render SplashScreenLayout')*/ }
 			<h1>SplashScreenLayout</h1>
 		</div>

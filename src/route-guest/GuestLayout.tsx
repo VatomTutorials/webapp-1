@@ -1,26 +1,26 @@
-import { Outlet, useOutletContext, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import React from "react";
-import { useDiagConfig, DiagStamp } from '../components/Diagnostics';
+import { useRootContext_FromOutletContext }	from '../route-core/RootLayout';
+import { DiagStamp } from '../components/Diagnostics';
+// import '../Common.css';
 
 
 const GuestLayout = () => {
 	const navigate = useNavigate();
-	const { accessToken } = useOutletContext();
-	const diagConfig = useDiagConfig();
+	const rootContext = useRootContext_FromOutletContext();
 
 	React.useEffect(() => {
 		console.log('GuestLayout mounted');
-		if (!! accessToken) navigate('/default');
+		if (rootContext.isUserLoggedIn) navigate('/default');
 	}, [])
 
   // console.log('In GuestLayout');
 
   return (
 		<div>
-			<DiagStamp stampText='ThisComponentName' diagConfig={diagConfig} />
+			<DiagStamp stampText='GuestLayout' diagConfig={rootContext.diagConfig} />
 			{ /*console.log('Render GuestLayout')*/ }
-			<h1>GuestLayout</h1>
-			<Outlet />			
+			<Outlet context={{rootContext}}/>			
 		</div>
   );
 }
