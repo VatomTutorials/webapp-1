@@ -4,7 +4,7 @@ import '../Common.css';
 
 
 const PrivHome = () => {
-	const rootContext = useRootContext_FromOutletContext();
+	const { rootContext } = useRootContext_FromOutletContext();
 
   // console.log('In PrivHome', diagConfig);
 

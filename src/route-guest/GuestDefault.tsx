@@ -6,7 +6,7 @@ import { DiagStamp } from '../components/Diagnostics';
 
 const GuestDefault = () => {
   const navigate = useNavigate();
-	const rootContext = useRootContext_FromOutletContext();
+	const { rootContext } = useRootContext_FromOutletContext();
 
   React.useEffect(() => {
   	console.log('GuestDefault mounted');

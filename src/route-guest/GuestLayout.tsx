@@ -7,7 +7,7 @@ import { DiagStamp } from '../components/Diagnostics';
 
 const GuestLayout = () => {
 	const navigate = useNavigate();
-	const rootContext = useRootContext_FromOutletContext();
+	const { rootContext } = useRootContext_FromOutletContext();
 
 	React.useEffect(() => {
 		console.log('GuestLayout mounted');

@@ -7,7 +7,7 @@ import { DiagStamp } from '../components/Diagnostics';
 
 const PrivLayout = () => {
 	const navigate = useNavigate();
-	const rootContext = useRootContext_FromOutletContext();
+	const { rootContext } = useRootContext_FromOutletContext();
 
 	React.useEffect(() => {
 		console.log('PrivLayout mounted');

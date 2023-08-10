@@ -7,7 +7,7 @@ import { DiagStamp } from '../components/Diagnostics';
 
 const DefaultRedirect = () => {
   const navigate = useNavigate();
-	const rootContext = useRootContext_FromOutletContext();
+	const { rootContext } = useRootContext_FromOutletContext();
 	//const diagConfig = useDiagConfig();
 
   React.useEffect(() => {

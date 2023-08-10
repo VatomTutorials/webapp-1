@@ -3,7 +3,7 @@ import { DiagStamp } from '../components/Diagnostics';
 
 
 const GuestError404 = () => {
-	const rootContext = useRootContext_FromOutletContext();
+	const { rootContext } = useRootContext_FromOutletContext();
 
   return (
 		<div>
