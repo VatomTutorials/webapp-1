@@ -20,13 +20,13 @@ export function  RootLayout() {
   const sdkConfig = {}
   const identitySdk = new VatomIdentitySDK(clientId, sdkConfig)
   const [accessToken, setAccessToken] = React.useState(identitySdk.getAccessToken());
-  const rootContext:RootContext = {
+  const [rootContext] = React.useState({ //
   	isUserLoggedIn: (!! accessToken),
   	diagConfig: {
   		showLayoutNames: true,
   		logOnRender: true
   	}
-  };
+  }); // Not using setRootContext
 
   React.useEffect(() => {
     const triggerCallback = async () => {
