@@ -6,6 +6,12 @@ import React from "react";
 //import { VatomIdentitySDK } from "@vatom/identity-sdk"
 
 
+// export function useAccessToken_FromOutletContext() {
+//  //return useOutletContext<??? accessToken type unknown ???>();
+//   return useOutletContext<any>();
+// }
+
+
 function AppAccessLayout() {
 	const { identitySdk } = useOutletContext();
 	//const identitySdk = useIdentitySdk_FromOutletContext();
