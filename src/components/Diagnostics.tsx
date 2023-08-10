@@ -21,17 +21,20 @@ export function useDiagConfig() {
  *** *** *** ***/
  
 
-export function DiagStamp(props: DiagStampProps) {
+export function DiagStamp(props: { stampText: string, diagConfig: DiagConfig } ) {
 	//const { diagConfig, stampText } = useOutletContext();
-	let stampElement: JSX.Element =
-		<>
-			{
-				(!! props.diagConfig.showLayoutNames)
-					? <div className='diagnostic_text' >{props.stampText}</div> : <div/>
-			}
-		</>
-
+	
+	let stampElement: JSX.Element;
+	
   console.log('In DiagStamp with props', props);
+
+	
+	if (props.diagConfig.showLayoutNames){
+		stampElement = <div className='diagnostic_text' >{props.stampText}</div>;
+	}else{
+		stampElement = <div/>;
+	}
+
 
   return (
 		<div>
