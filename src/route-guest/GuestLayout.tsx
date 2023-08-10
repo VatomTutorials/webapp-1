@@ -1,10 +1,12 @@
 import { Outlet, useOutletContext, useNavigate } from 'react-router-dom';
 import React from "react";
+import { useDiagConfig, DiagStamp } from '../components/Diagnostics';
 
 
 const GuestLayout = () => {
-	const { accessToken } = useOutletContext();
 	const navigate = useNavigate();
+	const { accessToken } = useOutletContext();
+	const diagConfig = useDiagConfig();
 
 	React.useEffect(() => {
 		console.log('GuestLayout mounted');
@@ -15,7 +17,8 @@ const GuestLayout = () => {
 
   return (
 		<div>
-			{ console.log('Render GuestLayout') }
+			<DiagStamp stampText='ThisComponentName' diagConfig={diagConfig} />
+			{ /*console.log('Render GuestLayout')*/ }
 			<h1>GuestLayout</h1>
 			<Outlet />			
 		</div>

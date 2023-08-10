@@ -1,6 +1,12 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useOutletContext } from 'react-router-dom';
 // import React from "react";
 import { VatomIdentitySDK } from "@vatom/identity-sdk"
+
+
+export function useIdentitySdk_FromOutletContext() {
+  //return useOutletContext<VatomIdentitySDK>();
+  return useOutletContext<any>();
+}
 
 
 function AppIdSdkLayout() {

@@ -1,12 +1,14 @@
+//import { Outlet, useNavigate } from 'react-router-dom';
 import { Outlet, useOutletContext, useNavigate } from 'react-router-dom';
 import React from "react";
-import { DiagConfig, DiagStamp } from '../components/Diagnostics';
+import { useDiagConfig, DiagStamp } from '../components/Diagnostics';
 import '../Common.css';
 
 
 const PrivLayout = () => {
-	const { diagConfig, accessToken } = useOutletContext();
 	const navigate = useNavigate();
+	const { accessToken } = useOutletContext();
+	const diagConfig = useDiagConfig();
 
 	React.useEffect(() => {
 		console.log('PrivLayout mounted');

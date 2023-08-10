@@ -1,9 +1,11 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import React from "react";
+import { useDiagConfig, DiagStamp } from '../components/Diagnostics';
 
 
 const GuestDefault = () => {
   const navigate = useNavigate();
+	const diagConfig = useDiagConfig();
 
   React.useEffect(() => {
   	console.log('GuestDefault mounted');
@@ -12,7 +14,8 @@ const GuestDefault = () => {
 
   return (
 		<div>
-			{ console.log('Render GuestDefault') }
+			<DiagStamp stampText='GuestDefault' diagConfig={diagConfig} />
+			{ /*console.log('Render GuestDefault')*/ }
 			<h1>GuestDefault</h1>
 		</div>
   );

@@ -1,11 +1,11 @@
-import { Outlet, useOutletContext } from 'react-router-dom';
-import { DiagConfig } from '../components/diagTypes';
-import { DiagStamp } from '../components/DiagStamp';
+//import { useOutletContext } from 'react-router-dom';
+import { useDiagConfig, DiagStamp } from '../components/Diagnostics';
 import '../Common.css';
 
 
 const PrivHome = () => {
-	const { diagConfig } = useOutletContext();
+	//const { diagConfig } = useOutletContext();
+	const diagConfig = useDiagConfig();
 
   // console.log('In PrivHome', diagConfig);
 
@@ -18,6 +18,3 @@ const PrivHome = () => {
 }
 //
 export default PrivHome;
-
-
-// 			{ showLayoutNames ? <div className='diagnostic_text' >PrivHome</div>:<div/>}

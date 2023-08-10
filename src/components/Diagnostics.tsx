@@ -1,3 +1,4 @@
+import { useOutletContext } from 'react-router-dom';
 import '../Common.css';
 
 
@@ -7,7 +8,18 @@ export interface DiagConfig {
 }
 
 
-export function DiagStamp(props) {
+export interface DiagStampProps {
+  stampText:					string;
+  diagConfig:					DiagConfig;
+}
+
+
+export function useDiagConfig() {
+  return useOutletContext<DiagConfig>();
+}
+
+
+export function DiagStamp(props: DiagStampProps) {
 	//const { diagConfig, stampText } = useOutletContext();
 	let stampElement: JSX.Element = (!! props.diagConfig.showLayoutNames)
 		? <div className='diagnostic_text' >{props.stampText}</div> : <div/>;
@@ -16,7 +28,7 @@ export function DiagStamp(props) {
 
   return (
 		<div>
-			{ (!! props.diagConfig.logOnRender) ? console.log(`Render ${props.stampText}`) : <div/> }
+			<>{ (!! props.diagConfig.logOnRender) ? console.log(`Render ${props.stampText}`) : <div/> }</>
 			{ stampElement }
 		</div>
   );
@@ -26,11 +38,19 @@ export function DiagStamp(props) {
 /*** *** *** ***
 // Usage:
 
-import { DiagConfig, DiagStamp } from '../components/Diagnostics';
 import { Outlet, useOutletContext } from 'react-router-dom';
+import { useDiagConfig, DiagStamp } from '../components/Diagnostics';
+
+	const { accessToken } = useOutletContext();
+	const diagConfig = useDiagConfig();
 
 
-	const { diagConfig } = useOutletContext();
+ *** *** *** ***
+
+
+import { useDiagConfig, DiagStamp } from '../components/Diagnostics';
+
+	const diagConfig = useDiagConfig();
 
 	return (
 		<div>

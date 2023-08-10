@@ -1,11 +1,14 @@
 import { DiagConfig, DiagStamp } from '../components/Diagnostics';
+//import { Outlet } from 'react-router-dom';
 import { Outlet, useOutletContext } from 'react-router-dom';
+//import useIdentitySdk_FromOutletContext				from './AppIdSdkLayout';
 import React from "react";
-import { VatomIdentitySDK } from "@vatom/identity-sdk"
+//import { VatomIdentitySDK } from "@vatom/identity-sdk"
 
 
 function AppAccessLayout() {
 	const { identitySdk } = useOutletContext();
+	//const identitySdk = useIdentitySdk_FromOutletContext();
   const [accessToken, setAccessToken] = React.useState(identitySdk.getAccessToken())
   //const showLayoutNames = true;
   const diagConfig:DiagConfig = {showLayoutNames: true, logOnRender: true}
@@ -24,9 +27,10 @@ function AppAccessLayout() {
   }, [])
   
 	return (
-		<>
+		<div>
+			<DiagStamp stampText='AppAccessLayout' diagConfig={diagConfig} />
 			<Outlet context={{diagConfig, accessToken}} />
-		</>
+		</div>
 	);
 }
 

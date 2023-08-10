@@ -1,13 +1,13 @@
-// import { useNavigate } from "react-router-dom";
-// import Button from 'react-bootstrap/Button';
-// import appLogo from '../assets/app-logo.png';
-// import '../Common.css';
+import { useDiagConfig, DiagStamp } from '../components/Diagnostics';
 
 
 const GuestHome = () => {
+	const diagConfig = useDiagConfig();
+
   return (
 		<div>
-			{ console.log('Render GuestHome') }
+			<DiagStamp stampText='ThisComponentName' diagConfig={diagConfig} />
+			{ /*console.log('Render GuestHome')*/ }
 			<h1>Home page</h1>
 		</div>
   );
