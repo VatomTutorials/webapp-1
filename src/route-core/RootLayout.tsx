@@ -11,7 +11,7 @@ export interface  RootContext{
 
 
 export function useRootContext_FromOutletContext() {
-  return useOutletContext<RootContext>();
+  return useOutletContext<{rootContext: RootContext}>();
 }
 
 

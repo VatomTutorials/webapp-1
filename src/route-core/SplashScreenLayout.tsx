@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import React from "react";
-import { RootContext, useRootContext_FromOutletContext }	from './RootLayout';
-import { DiagConfig, DiagStamp } from '../components/Diagnostics';
+import { useRootContext_FromOutletContext }	from './RootLayout';
+import { DiagStamp } from '../components/Diagnostics';
 
 
 const SplashScreenLayout = () => {
