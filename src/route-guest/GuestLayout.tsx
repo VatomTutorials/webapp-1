@@ -1,8 +1,9 @@
 import { Outlet, useNavigate } from 'react-router-dom';
 import React from "react";
 import { useRootContext_FromOutletContext }	from '../route-core/RootLayout';
+import { GuestFooter } from './GuestFooter';
 import { DiagStamp } from '../components/Diagnostics';
-// import '../Common.css';
+import '../Common.css';
 
 
 const GuestLayout = () => {
@@ -17,10 +18,10 @@ const GuestLayout = () => {
   // console.log('In GuestLayout');
 
   return (
-		<div>
+		<div className="torso_flexitem torso_scroll_container">
 			<DiagStamp stampText='GuestLayout' diagConfig={rootContext.diagConfig} />
-			{ /*console.log('Render GuestLayout')*/ }
 			<Outlet context={{rootContext}}/>			
+			<GuestFooter />
 		</div>
   );
 }

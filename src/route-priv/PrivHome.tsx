@@ -9,7 +9,7 @@ const PrivHome = () => {
   // console.log('In PrivHome', diagConfig);
 
   return (
-		<div>
+		<div className="content_section">
 			<DiagStamp stampText='PrivHome' diagConfig={rootContext.diagConfig} />
 			<h1>Home page</h1>
 		</div>

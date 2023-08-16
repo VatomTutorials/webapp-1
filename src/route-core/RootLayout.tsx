@@ -2,6 +2,7 @@ import { Outlet, useOutletContext } from 'react-router-dom';
 import React from "react";
 import { VatomIdentitySDK } from "@vatom/identity-sdk"
 import { DiagConfig, DiagStamp } from '../components/Diagnostics';
+import '../Common.css';
 
 
 export interface  RootContext{
@@ -43,7 +44,7 @@ export function  RootLayout() {
   //console.log('In RootLayout');
 
 	return (
-		<div>
+		<div className="page_frame">
 			<DiagStamp stampText='RootLayout' diagConfig={rootContext.diagConfig} />
 			<Outlet context={{rootContext}} />
 		</div>

@@ -1,8 +1,9 @@
 import { Outlet, useNavigate } from 'react-router-dom';
 import React from "react";
 import { useRootContext_FromOutletContext }	from '../route-core/RootLayout';
+import { PrivFooter } from './PrivFooter';
 import { DiagStamp } from '../components/Diagnostics';
-// import '../Common.css';
+import '../Common.css';
 
 
 const PrivLayout = () => {
@@ -17,9 +18,10 @@ const PrivLayout = () => {
   // console.log('In PrivLayout', diagConfig);
 
   return (
-		<div>
+		<div className="torso_flexitem torso_scroll_container">
 			<DiagStamp stampText='PrivLayout' diagConfig={rootContext.diagConfig} />
-			<Outlet context={{rootContext}}/>			
+			<Outlet context={{rootContext}} />
+			<PrivFooter />
 		</div>
   );
 }
