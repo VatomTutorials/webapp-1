@@ -12,7 +12,7 @@ const DefaultRedirect = () => {
 
   React.useEffect(() => {
   	console.log('DefaultRedirect mounted');
-		const nextRoute = (! rootContext.isUserLoggedIn) ? '/guest' : '/priv';
+		const nextRoute = (! rootContext.isUserLoggedIn) ? '/guest/about' : '/priv/home';
   	navigate(nextRoute);
   }, [])
   
