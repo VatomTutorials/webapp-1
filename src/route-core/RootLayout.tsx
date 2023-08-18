@@ -16,7 +16,13 @@ export function useRootContext_FromOutletContext() {
 
 export function RootLayout() {
   const clientId = "dce3993b6a24c278";
-  const sdkConfig = {};
+  //const sdkConfig = {};
+  const sdkConfig = {
+    loginCallbackUri: "/",
+    logoutCallbackUri: "/",
+    authority: "https://id.vatom.com",
+    businessId: "3UewHF0ge9",
+  };
   const identitySdk = new VatomIdentitySDK(clientId, sdkConfig);
   const [accessToken, setAccessToken] = React.useState(
     identitySdk.getAccessToken()
