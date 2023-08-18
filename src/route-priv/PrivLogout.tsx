@@ -15,6 +15,7 @@ const PrivLogout = () => {
         className="plain_button_enabled"
         onClick={() => {
           console.log("Click for logout");
+          rootContext.identitySdk.logout();
         }}
       >
         log out now
