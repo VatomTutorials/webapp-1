@@ -18,7 +18,7 @@ const PrivLayout = () => {
   // console.log('In PrivLayout', diagConfig);
 
   return (
-		<div>
+		<>
 			<DiagStamp stampText='PrivLayout' diagConfig={rootContext.diagConfig} />
 			<div className="torso_flexitem torso_scroll_container">
 				<div className="content_section">
@@ -26,7 +26,7 @@ const PrivLayout = () => {
 				</div>
 			</div>
 			<PrivFooter />
-		</div>
+		</>
   );
 }
 //
