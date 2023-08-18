@@ -10,6 +10,8 @@ import PrivLayout from "../route-priv/PrivLayout";
 import PrivAbout from "../route-priv/PrivAbout";
 import PrivError404 from "../route-priv/PrivError404";
 import PrivHome from "../route-priv/PrivHome";
+import PrivWallet from "../route-priv/PrivWallet";
+import PrivLogout from "../route-priv/PrivLogout";
 
 export const appRouter = createBrowserRouter([
   {
@@ -22,8 +24,8 @@ export const appRouter = createBrowserRouter([
         element: <GuestLayout />,
         children: [
           { index: true, element: <PrivError404 /> },
-          { path: "about", element: <GuestAbout /> },
           { path: "login", element: <GuestLogin /> },
+          { path: "about", element: <GuestAbout /> },
           { path: "*", element: <GuestError404 /> },
         ],
       },
@@ -32,8 +34,10 @@ export const appRouter = createBrowserRouter([
         element: <PrivLayout />,
         children: [
           { index: true, element: <PrivError404 /> },
-          { path: "about", element: <PrivAbout /> },
           { path: "home", element: <PrivHome /> },
+          { path: "wallet", element: <PrivWallet /> },
+          { path: "logout", element: <PrivLogout /> },
+          { path: "about", element: <PrivAbout /> },
           { path: "*", element: <PrivError404 /> },
         ],
       },
