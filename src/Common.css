@@ -1,79 +1,79 @@
 #root {
-  /*** max-width: 1280px; /***/ 
+  /*** max-width: 1280px; /***/
   margin: 0 auto;
   padding: 0;
   text-align: center;
 }
 
-
 .border-box {
-  /***/ border:1px solid black; /***/ 
+  /***/
+  border: 1px solid black; /***/
 }
 
 .page_frame {
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
-.page_header{
-	overflow: hidden;
-	height: 64px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+.page_header {
+  overflow: hidden;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.page_torso{
-	height: 1fr;
-	overflow: auto;
+.page_torso {
+  height: 1fr;
+  overflow: auto;
 }
 
-.page_footer{
-	overflow: hidden;
-	height: 72px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	background-color: navy;
+.page_footer {
+  overflow: hidden;
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #606060;
 }
 
-.torso_flexitem{
-	flex: 1 1 auto;
+.torso_flexitem {
+  flex: 1 1 auto;
 }
 
 .torso_scroll_container {
-	margin-left: 12px;
-	overflow-y: auto;
+  margin-left: 12px;
+  overflow-y: auto;
 }
 
 .content_section {
-	padding: 20px;
+  padding: 20px;
 }
 
-.navbar_flexitem{
-	flex: 0 1 auto;
-	padding: 14px;
+.navbar_flexitem {
+  flex: 0 1 auto;
+  padding: 14px;
 }
 
-.navbar_button_disabled{
-	background-color: navy;
-	color: white;
-	padding: 0px;
-	font-size: 32px;
+.navbar_button_disabled {
+  background-color: #606060;
+  color: white;
+  padding: 0px;
+  font-size: 32px;
 }
 
-.navbar_button_enabled{
-	background-color: white;
-	color: black;
-	padding: 5px 10px;
-	margin: 4px;
-	font-size: 18px;
+.navbar_button_enabled {
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  margin: 4px;
+  font-size: 18px;
 }
 
-.diagnostic_text{
-	background-color: pink;
-	color: black;
-	font-size: 10px;
+.diagnostic_text {
+  background-color: pink;
+  color: black;
+  font-size: 10px;
 }
