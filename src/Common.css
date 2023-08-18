@@ -72,6 +72,17 @@
   font-size: 18px;
 }
 
+.plain_button_enabled {
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  margin: 4px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  font-size: 18px;
+}
+
 .diagnostic_text {
   background-color: pink;
   color: black;
