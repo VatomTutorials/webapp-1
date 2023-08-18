@@ -24,7 +24,7 @@ const GuestLayout = () => {
           <Outlet context={{ rootContext }} />
         </div>
       </div>
-      <PrivFooter />
+      <GuestFooter />
     </>
   );
 };

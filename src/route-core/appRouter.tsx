@@ -5,7 +5,7 @@ import DefaultRedirect from "./DefaultRedirect";
 import GuestLayout from "../route-guest/GuestLayout";
 import GuestAbout from "../route-guest/GuestAbout";
 import GuestError404 from "../route-guest/GuestError404";
-import GuestHome from "../route-guest/GuestHome";
+import GuestLogin from "../route-guest/GuestLogin";
 import PrivLayout from "../route-priv/PrivLayout";
 import PrivAbout from "../route-priv/PrivAbout";
 import PrivError404 from "../route-priv/PrivError404";
@@ -23,7 +23,7 @@ export const appRouter = createBrowserRouter([
         children: [
           { index: true, element: <PrivError404 /> },
           { path: "about", element: <GuestAbout /> },
-          { path: "home", element: <GuestHome /> },
+          { path: "login", element: <GuestLogin /> },
           { path: "*", element: <GuestError404 /> },
         ],
       },
