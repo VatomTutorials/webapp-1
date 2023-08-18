@@ -18,9 +18,13 @@ const PrivLayout = () => {
   // console.log('In PrivLayout', diagConfig);
 
   return (
-		<div className="torso_flexitem torso_scroll_container">
+		<div>
 			<DiagStamp stampText='PrivLayout' diagConfig={rootContext.diagConfig} />
-			<Outlet context={{rootContext}} />
+			<div className="torso_flexitem torso_scroll_container">
+				<div className="content_section">
+					<Outlet context={{rootContext}} />
+				</div>
+			</div>
 			<PrivFooter />
 		</div>
   );
