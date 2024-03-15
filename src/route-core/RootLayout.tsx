@@ -18,7 +18,7 @@ export function RootLayout() {
   const clientId = "dce3993b6a24c278";
   //const sdkConfig = {};
   const sdkConfig = {
-    loginCallbackUri: "/",
+    loginCallbackUri: "/login",
     logoutCallbackUri: "/",
     authority: "https://id.vatom.com",
     businessId: "3UewHF0ge9",
